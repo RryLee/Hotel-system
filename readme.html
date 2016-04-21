@@ -1,0 +1,2369 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>readme</title></head><body><article class="markdown-body"><h1 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>一，引言</h1>
+<h3 id="11"><a name="user-content-11" href="#11" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1.1　研究背景与意义</h3>
+<p>随着人类在科技上的不断进步，信息的交流变得更加方便快捷，同时也呈现着多元化的趋势。网络，计算机逐渐改变着人们的生活方式，互联网逐渐成为人们生活中必不可少的一项，并且逐步渗透到各个传统行业中。在这种背景大环境下，信息管理显得越来越重要，当然，发展也是越来越快，随着这种信息化的趋势，也给酒店，学校，政府等一系列部分带来了很大的便利。互联网方向的管理系统逐渐在各个领域发光发热。</p>
+<p>随着国民生活水平的提高，对于酒店来说，每天成百上千的人入住酒店，如何做好用户查询酒店、预订房间、退订房间等工作是传统酒店的一大问题。如果能实现酒店管理的自动化，无疑对企业来说会带来很大的便利。在互联网大规模应用于各行各业之前，酒店信息管理需要投入人力物力。伴随着社会的进步，人们生活水平的提高，越来越多的人们成为了酒店常客，这就导致酒店不断扩张，酒店信息管理需要投入大量的人力物力，慢慢的导致效率变低，酒店服务度变低，成为了一定恶性循环。这时互联网的引入无疑是酒店的一剂强心针，帮助酒店解决了大量问题，酒店各个板块通过互联网信息管理系统变得越来越快捷与方便，提高酒店效率与顾客满意度。</p>
+<p>开放性的酒店信息管理服务性系统，不断满足酒店业务升级以及行业发展的变化。系统开发具有一定的超前意识，强调系统的开放性、模块化、标准化等设计，有明确的组织架构以及需要实现的功能模块，换不同规格、不同模式的酒店，利用系统的功能模块分配可以灵活组织，适用于各类大中小型酒店。</p>
+<h3 id="12"><a name="user-content-12" href="#12" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1.2 项目研究现状</h3>
+<p>在当今这个信息化的时代，信息传递变得迅猛及时，掌握不了最新的信息，就有可能在人类的发展之路上掉队。现在酒店的人流量也是很大的，必须做到安全有效的管理，这样才能用最好的环境去服务旅客。</p>
+<p>酒店每天在为客人的提供结算账单、提供查询、登记信息的记录、订房的信息、对客房状况的统计等方面具有很大的工作量。在进行上述各项业务时运用一些传统的手工方式可能具有一些不方便的地方，比如不仅需要大量的人手，而且速度比较慢，同时错误出现的可能性也会比较大。而在进行酒店的管理时，对管理信息的系统科学合理的运用可以把业务运作的准确性和速度大大的提高。</p>
+<p>可以推动酒店的信息管理规范化进程，从而将服务的质量提高，算机在进行信息的处理时具有相当快的速度，所以在很大的程度上可以将客人在结账、购物、娱乐、用餐和住宿登记时等候的时间节省下来。同时，管理信息系统可以为住店客人提供的所有信息和服务具有规范、准确、及时的特点，从而将错误可能性大大降低了，还可以随时的查询有关信息，可以给客人提供留言以及叫早等服务，因此，酒店管理信息系统的运用可以帮助酒店去进行市场的开拓，同时树立自己的特色形象。</p>
+<p>当然，也可以推动酒店经济效益的提高，运用管理信息系统可以节省酒店自身的人力物力，从而实现节流的目的。同时，酒店可以通过对管理信息系统的合理利用，不断的去增加自身的服务项目，可以提升酒店的服务档次，从而实现开源。因此，管理信息系统在酒店管理中的运用能有效地提高酒店的经济效益。</p>
+<p>酒店在面对激烈的市场竞争时，必须能科学合理的预测分析各种业务和酒店的经营状况。在这个过程当中，酒店管理信息系统能把当前的数据以及历史的资料及时的提供出来，同时还可以进行同期的对比分析，并且提供其他的分析模式。在这样方便的条件下，管理人员能很快的将复杂的分析工作完成。</p>
+<h3 id="13"><a name="user-content-13" href="#13" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1.3 项目研究目标内容及要求</h3>
+<ul>
+<li>设计概要</li>
+</ul>
+<p>系统采用 HTML, css, JavaScript 只是进行前端展示，后台使用 php 开发，采用 mysql 数据库，开发工具使用 phpstorm, web 容器是 apache，系统框架采用 Symfony 开发。通过数据库和开发工具的结合进行设计开发，通过不断修改和不断的测试，进一步升级系统，全面的实现系统功能。</p>
+<ul>
+<li>设计内容</li>
+</ul>
+<p>本系统是一个酒店信息管理系统，同时具备用户模块功能，开发前台查询服务。系统拥有简单使用的操作界面，显示酒店的所有信息，并且能够进行查询流水信息，通过房间类型，房间号，时间维度查询。还可以管理酒店房间，房间分类，以及对人员的管理。</p>
+<ul>
+<li>设计目标</li>
+</ul>
+<p>完成这个复杂的系统，加强自身的代码能力，以及数据库设计的能力，更重要的是处理数据，管理数据的能力，在整个系统的完成中，可以学到各类的知识，百利而无一害。</p>
+<ul>
+<li>设计要求</li>
+</ul>
+<p>通过收集国内外的参考文献，制定工作计划，运用各种研究方法，独立的完成毕设工作，按任务书的要求，在期限内完成开题报告，中期的检查工作，系统的演示，论文的撰写和答辩的工作，论文要求概念清楚，内容正确，条理分明，语言流畅，结构清晰。</p>
+<h3 id="14"><a name="user-content-14" href="#14" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1.4 本文结构</h3>
+<p>本文从酒店信息管理系统的研究现状出发，分析了该系统设计与实现的背景与意义，并对该项目的研究现=现状进行了介绍。然后对系统实现时所采用的关键技术进行了阐述。最后结合系统的需求，对系统的设计和实现进行详细的说明。其中有这些：</p>
+<p>第一章是引言。主要介绍系统的研究背景与意义，以及研究的现状。</p>
+<p>第二章对系统采用的关键技术进行介绍，包括 php, Symfony, 以及数据库采用的 Mysql。</p>
+<p>第三章是系统分析和设计部分。主要包括这两个内容：数据库设计和需求分析。数据库设计部分通过数据流图、数据字典，以及系统的数据库设计进行具体介绍。需求分析部分对系统设计的总体目标和具体目标进行了阐述，明确了设计的方向。</p>
+<p>第四章是系统详细设计和实现部分。是论文的核心部分，对系统的输入/输出设计进行了一些介绍，并且对系统的功能模块，体系结构以及处理过程进行了详细的介绍。</p>
+<p>第五章是系统测试部分。从本系统测试目标和任务出发，采用最适当的测试方案，实现了对系统的测试。</p>
+<p>第六章十总结和展望部分。通过总结出系统的一些问题，提出对未来的研究方向。</p>
+<h1 id="_2"><a name="user-content-_2" href="#_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>二 关键技术分析</h1>
+<h3 id="21-web"><a name="user-content-21-web" href="#21-web" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2.1 web 发展概述</h3>
+<p>互联网 web　技术发展 30　余年，从 web1.0 时代到 web2.0 时代，接着是现在的 web3.0　时代，从上网的习惯到工具，从主机（服务器端）到桌面（客户端），再到Web（服务器端），现在又发展到了现代化的Web——客户端功能越来越强，越来越多的工作又回到了客户端。Web1.0是一家实体商店，房子就在那里，你随时都可以来：台式电脑使得人们只能在固定的地点连入网络。</p>
+<p>Web2.0是一家移动商店，随时随地跟着你等待你的即时召唤；移动设备使得人们随时随地可以连入网络。</p>
+<p>Web3.0则是商店和你是一体的，你自己就可以娱乐自己。人机交互意味着“人”和“科技”的距离进一步缩短，甚至可以说“科技”逐渐演变成为“人”的组成部分之一。</p>
+<p>Web1.0是过去时，2.0是现在时，3.0是将来时。从现下正值壮年的Web2.0的特点中，也许可以看出过去和未来的变化。</p>
+<p>web 语言的发展如今也是百花齐放，Ruby on Rails, Python, PHP, JSP, .NET ASP, NodeJs 等等，虽然语言只是工具，但是选择工具的任然是人类，所以我选择 php，不要问我为什么，因为 php 是世界上最好的语言。</p>
+<h3 id="22-php"><a name="user-content-22-php" href="#22-php" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2.2 php 的介绍</h3>
+<p>这里我不是针对谁，很多人对 php 的认识仍然停留在 php 5.0 之前，不得不承认，那时的 php 真的有很多诟病，没有面向对象，没有命名空间，基本上就是一个 c 语言用来做 web 开发的拓展。不过，从 php5.4 之后开始，性能以及语言本身都有了不知道多少倍的提升，如果你现在让一个 c++ 程序员来看 php 代码，他第一反应会是，怎么这么像，不要问我为什么。php 在 OOP 这块大费苦心，语言目前以前很 OOP 了。那么还是来介绍下吧，有些东西不说清楚，很多人不懂。</p>
+<p>PHP 是英文 Hypertext Preprocessor ( 超文本预处理器 ) 的缩写，它是一种服务器端的脚本 编程 语言，其特点是简单、面向对象、解释执行、健壮安全、独立于架构、可移植、动态。</p>
+<h3 id="23-php"><a name="user-content-23-php" href="#23-php" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2.3 php的特点</h3>
+<p>系统使用 php 开发，也是由于 php 具备以下这些特点：</p>
+<ul>
+<li>开源性</li>
+</ul>
+<p>首先，他开源，这样就不存在什么病毒植入危言论，其实，源代码就是最好的学习资料，通过对源代码的研究，你可以获得很强的查克拉。然后你就可以很牛。在其次，如果有些问题你不能很好的解决，你可以通过修改源代码或是添加拓展的方式去解决你的问题。</p>
+<ul>
+<li>强大的函数库</li>
+</ul>
+<p>php 的 build_in 函数是我目前见过语言中最多的，你不要想其他语言一样 import 或是 require，你可以直接使用它。</p>
+<ul>
+<li>最好的文档</li>
+</ul>
+<p>php 的文档是开源的，开发者可以去贡献自己对 php 的理解，去添加例子，在 php 官网随便找个函数，你甚至可以看到 2000 年之前的评论贡献。所以，你不用担心你会看不懂，不会用。</p>
+<ul>
+<li>最好的包管理</li>
+</ul>
+<p>或许你会说 java 有 maven，python 有 pip，nodejs 有 npm，ruby 有 gem，那么 php 的 composer 为什么是最好的，这个问题也没有为什么，信仰而已。</p>
+<ul>
+<li>最多的开发者</li>
+</ul>
+<p>如果你有任何开发中遇到问题，只要你有科学上网和英文阅读的能力，你就可以找到答案，你的问题真的在 10 年前就有人遇到并且解决了，还留下了完整的解决方案。毕竟，会 php 的开发者是很多的，有人说，phper 因为语言本身没有优势，所以人比较热情，我不知道是不是真的。</p>
+<ul>
+<li>跨平台</li>
+</ul>
+<p>由于跨平台性，你可以在你熟悉的微软 windows 上开发，然后发布到一台 linux 服务器上面运行，这是完全没有问题的。</p>
+<ul>
+<li>简易性</li>
+</ul>
+<p>这是最重要的一条，由于太简单，所以基本在使用上，是没有门槛的，想用就用吧。</p>
+<h3 id="24-symfony"><a name="user-content-24-symfony" href="#24-symfony" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2.4 Symfony 的介绍</h3>
+<p>Symfony 提高了代码的抽象级别。相对于简单的，直接暴露底层概念的 PHP 语言，Symfony 提供了一套解决特定工程问题的概念和工具，帮助广大的 Coder 的减少重复性工作。抽象化意味着能用更简洁的东西表达复杂的概念，流程等。Symfony 一些介绍：</p>
+<ul>
+<li>
+<p>路由：能限制 hostname，这就让有大量公共功能的网站可以共用一套代码；URI 识别支持 Reg 检测，让 url 能定义的随心所欲；支持前缀，import，便于模块化。</p>
+</li>
+<li>
+<p>wig模板：这是我最喜欢的一个组件。它提供了一套不同于 php，但非常适合处理复杂网站结构，页面结构的语法。extension 很方便也很强大，通用的操作通过 extension 能很好的表达，比如需要缓存页面的某个模块到 redis ，写一个 ViewExtension，就能在模板里面用一个方法来缓存特定模块了，非常方便，代码也很容易管理。</p>
+</li>
+<li>
+<p>composer包管理：让代码的依赖关系变得很清晰。而且现在第三方有很多不错的 bundle，比如抽象 redis 的 snc/redis-bundle，处理图片的 liip/imagine-bundle，第三方登录的 hwi/oauth-bundle 等等等等。随着自己项目的逐渐成熟，也可以把项目对 Symfony 的定制独立出来用 composer 来管理，感觉挺不错的。</p>
+</li>
+<li>
+<p>Event，Listener 和 Services：非常方便的全局功能处理。惹人讨厌的是配置起来很麻烦，我用的是 yml 配置文件，为了找对路的语法真是掉了一层皮。</p>
+</li>
+</ul>
+<h3 id="25-mysql"><a name="user-content-25-mysql" href="#25-mysql" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2.5 Mysql 介绍</h3>
+<p>MySQL基本是生于互联网，长于互联网。其应用实例也大都集中于互联网方向，MySQL的高并发存取能力并不比大型数据库差，同时价格便宜，安装使用简便快捷，深受广大互联网公司的喜爱。并且由于MySQL的开源特性，针对一些对数据库有特别要求的应用，可以通过修改代码来实现定向优化，例如SNS、LBS等互联网业务。</p>
+<p>最大的一个特色，就是自由选择存储引擎。每个表都是一个文件，都可以选择合适的存储引擎。常见的引擎有 InnoDB、 MyISAM、 NDBCluster等。但由于这种开放插件式的存储引擎，比如要求数据库与引擎之间的松耦合关系。从而导致文件的一致性大大降低。在SQL执行优化方面，也就有着一些不可避免的瓶颈。在多表关联、子查询优化、统计函数等方面是软肋，而且只支持极简单的HINT。</p>
+<p>Mysql 同时也是开源并且免费的，轻松的获取，廉价的学习成本，大学生的最好选择了。</p>
+<p>php 和 mysql 自古以来就是一对好基友，php 对 mysql 的支持不输于任何一门后台语言，所以选择 php 之后，基本数据库也就确定了。</p>
+<p>Mysql支持所有标准SQL中的数值类型，其中包括严格数据类型(INTEGER,SMALLINT,DECIMAL,NUMBERIC)，以及近似数值数据类型(FLOAT,REAL,DOUBLE PRESISION),并在此基础上进行扩展。<br />
+扩展后增加了TINYINT,MEDIUMINT,BIGINT这3种长度不同的整形，并增加了BIT类型，用来存放位数据。</p>
+<table>
+<thead>
+<tr>
+<th>整数类型</th>
+<th>字节</th>
+<th>范围（有符号）</th>
+<th>范围（无符号）</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TINYINT</td>
+<td>1字节</td>
+<td>(-128，127)</td>
+<td>(0，255)</td>
+<td>小整数值</td>
+</tr>
+<tr>
+<td>SMALLINT</td>
+<td>2字节</td>
+<td>(-32 768，32 767)</td>
+<td>(0，65 535)</td>
+<td>大整数值</td>
+</tr>
+<tr>
+<td>MEDIUMINT</td>
+<td>3字节</td>
+<td>(-8 388 608，8 388 607) (0，16 777 215)</td>
+<td>大整数值</td>
+<td></td>
+</tr>
+<tr>
+<td>INT或INTEGER</td>
+<td>4字节</td>
+<td>(-2 147 483 648，2 147 483 647)</td>
+<td>(0，4 294 967 295)</td>
+<td>大整数值</td>
+</tr>
+<tr>
+<td>BIGINT</td>
+<td>8字节</td>
+<td>(-9 233 372 036 854 775 808，9 223 372 036 854 775 807)</td>
+<td>(0，18 446 744 073 709 551 615)</td>
+<td>极大整数值</td>
+</tr>
+<tr>
+<td>FLOAT</td>
+<td>4字节</td>
+<td>(-3.402 823 466 E+38，1.175 494 351 E-38)，0，(1.175 494 351 E-38，3.402 823 466 351 E+38)</td>
+<td>0，(1.175 494 351 E-38，3.402 823 466 E+38)</td>
+<td>单精度浮点数值</td>
+</tr>
+<tr>
+<td>DOUBLE</td>
+<td>8字节</td>
+<td>(1.797 693 134 862 315 7 E+308，2.225 073 858 507 201 4 E-308)，0，(2.225 073 858 507 201 4 E-308，1.797 693 134 862 315 7 E+308)</td>
+<td>0，(2.225 073 858 507 201 4 E-308，1.797 693 134 862 315 7 E+308)</td>
+<td>双精度浮点数值</td>
+</tr>
+</tbody>
+</table>
+<p>Mysql 有多语言接口， 支持很多编程语言接口，比如C/C++、Java等，得到很多开发者的喜爱。安全性也是很好的，SQLite数据库通过数据库级上的独占性和共享锁实现独立事务处理。这就意味着多个进程可以在同一时间从同一数据库读取数据，但只有一个可以写入数据[28]。在某个进程或线程向数据库执行写入操作之前，必须取得独占锁。在发出独占锁后，其他的读或写操作将不会在发生。</p>
+<h1 id="_3"><a name="user-content-_3" href="#_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>三，系统分析与设计</h1>
+<h3 id="31"><a name="user-content-31" href="#31" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.1 系统的可行性分析</h3>
+<h3 id="311"><a name="user-content-311" href="#311" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.1.1 技术可行性</h3>
+<p>该系统基于 php 开发语言和 symfony 框架开发，首先，php是开源的，然后 symfony 也是开源的，而且社区文档都维护的很好，对中文的支持也很好。再加上如今的网络化时代，学习资源的随意获取，所以基本不用担心会遇到技术上的难题，因此，技术上可行，调试相对野比较简单，同时数据库采用的是 Mysql 数据库。所有的技术都是非常成熟并且开源的，而且目前武术的中小型也是使用的该组合。综上所述，本系统的开发在技术上完全可行，没有问题。</p>
+<h3 id="312"><a name="user-content-312" href="#312" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.1.2 经济可行性</h3>
+<p>由于互联网的飞快大战，各种资源的共享和交流也是很容易的，本软件的所有资源都开元与互联网，并且十合法获取的。开发软件也是免费的，php环境的部署也是非常简单，基本上只有有一台笔记本就可以解决了。综上所述，经济上可行。</p>
+<h3 id="313"><a name="user-content-313" href="#313" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.1.3 操作可行性</h3>
+<p>该酒店信息管理系统的开发目标就是：能够操作方便的，性能良好，安全油耗的去管理酒店的业务。更具系统的设计需求，系统开发完成之后，会有简单操作，方便灵活的优点。加上本系统一键部署的特性，就算是部署在真实的服务器上也是非常简单的。而且整个系统非常灵活，拓展新很强，有其他的功能也很容易的添加，所以在操作上，是可行的。</p>
+<h3 id="32"><a name="user-content-32" href="#32" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.2 需求分析</h3>
+<h3 id="321"><a name="user-content-321" href="#321" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.2.1 功能需求分析</h3>
+<p>根据目前对现有酒店网站的研究，以及对现有各个管理系统的分析，然后结合本系统的任务书，及其基本的结构进行分析，对流程进行处理，确定初了基本的处理要求，我们可以知道为了让用户使用起来更加便捷，界面要简洁直观，功能不能太过复杂和累赘。综上所述，本系统会实现以下的功能：</p>
+<p>用户的行为:</p>
+<ul>
+<li>注册：酒店服务员注册</li>
+<li>登录：酒店服务员登录</li>
+<li>密码找回：服务员，管理员找回密码</li>
+<li>修改密码：登录用户修改密码</li>
+<li>修改资料：登录用户修改资料</li>
+</ul>
+<p>用户模块:</p>
+<ul>
+<li>增：管理员增加用户</li>
+<li>删：管理员删除用户</li>
+<li>改：管理员修改用户信息</li>
+<li>查：管理员查看用户信息</li>
+</ul>
+<p>酒店房间分类模块:</p>
+<ul>
+<li>增：管理员增加房间分类</li>
+<li>删：管理员删除房间分类</li>
+<li>改：管理员修改房间分类信息</li>
+<li>查：管理员查看房间分类信息</li>
+</ul>
+<p>酒店房间模块:</p>
+<ul>
+<li>增：管理员增加房间</li>
+<li>删：管理员删除房间</li>
+<li>改：管理员修改房间信息</li>
+<li>查：管理员查看房间信息</li>
+</ul>
+<p>订房模块：</p>
+<ul>
+<li>增：管理员增加订单</li>
+<li>删：管理员删除订单</li>
+<li>改：管理员修改订单信息</li>
+<li>查：管理员查看订单信息</li>
+</ul>
+<p>前台模块：</p>
+<ul>
+<li>查看所有房间房间</li>
+<li>按价格搜索房间</li>
+<li>按打折区间搜索房间</li>
+<li>显示当前房间预约情况</li>
+</ul>
+<p>控制台模块：</p>
+<ul>
+<li>查看酒店历史收入</li>
+<li>按房间类型查询流水</li>
+<li>按房间号查询流水</li>
+<li>按时间查询流水</li>
+<li>按时间范围查询流水</li>
+</ul>
+<p>系统设置模块：</p>
+<p>*　设置系统信息</p>
+<h3 id="322"><a name="user-content-322" href="#322" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.2.2 非功能需求分析</h3>
+<ul>
+<li>可维护性</li>
+</ul>
+<p>程序代码完全模块化，代码风格一致，命名规范，完全面向对象，并且文档完整。系统长时间的运行是稳定的，用户可以安全退出。就算过再久，代码也能狗很快读懂并且维护。</p>
+<ul>
+<li>可拓展性</li>
+</ul>
+<p>系统使用 mysql,数据结构编程方法基本保持一致，使用目前主流的开发模式。编码都遵循了一定的标准，有一定的根据。系统在升级时可以保留原有的数据，是系统易于升级拓展，技能满足当前的需求，有为拓展功能提供了一定的空间。</p>
+<ul>
+<li>操作性</li>
+</ul>
+<p>系统界面非常简介，只保留对系统有用的部分，其他的都舍去，用心专注最有用的功能，使用户能在最短的时间内上手该系统，并且能做出最有效的操作。这样，系统的操作性久非常的强。</p>
+<ul>
+<li>人性化</li>
+</ul>
+<p>对于系统中比较重要的操作，比如记录的删除，当用户点击删除时，都会弹出相应的提示框，防止由于用户的疏忽或是不小心，造成不必要的损失。这样如果用户没有正确的点击就不会执行操作，防止失误。</p>
+<ul>
+<li>帮助提醒</li>
+</ul>
+<p>从各个角度设置了一些提醒功能，对于那些比较复杂的操作，都会有相应的提醒，告诉用户怎么去操作，给系统最大的可用性。</p>
+<h3 id="33"><a name="user-content-33" href="#33" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.3 总体设计</h3>
+<p>本酒店管理系统基于 php 语言设计的主要功能模块包括：用户模块，用户注册，用户登录，使用邮箱和密码登陆。密码找回，发送修改密码的链接到用户邮箱，修改密码。用户修改自身信息。管理员登陆到后台，有以下模块：控制台模块，查看酒店当前的所有信息。系统设置模块，修改系统的设置以便在各个页面显示。用户模块：对所有用户进行增删改查。房间分类模块，房间初始化有几下分类，单间，标间，双人间，豪华单人间，以及总统套房，当然可以对这些进行增删改查。房间模块，显示房间的所有信息，包括他属于的房间分类名称，而且也具有增删改查的功能。订单模块，获取订单的所有信息，包括日期，以及该订单所需要的所有经费，在查询订单部分，可以根据房间的分类查询，房间号查询，以及时间查询。在右上角，登陆之后会出现用户图标，当然，点击用户图标，弹出的退出按钮，可以删除用户所有的隐私信息，安全耳朵退出该系统，如下图所示：</p>
+<p><img alt="" src="http://ww2.sinaimg.cn/mw690/baa3278fgw1f34ez5ym38j20by0fujsj.jpg" /></p>
+<h1 id="34"><a name="user-content-34" href="#34" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.4 数据流图</h1>
+<p>根据“功能分解，逐步求精”的原则，此次需求分析数据流图主要分为三层：顶层数据流图：确定出系统的输入与输出，第一层数据流图：对系统进行第一层的功能分解，分析每一个模块的数据流。最后，总体上自顶而下，逐层细化的方法，没一部分的数据流图如下：</p>
+<p>顶层数据流图：主要包括管理员，系统，数据库</p>
+<p><img alt="" src="http://ww3.sinaimg.cn/mw690/baa3278fgw1f34fnqnvq0j20cv078jrl.jpg" /></p>
+<p>第一层数据流图：主要包括用户以及其各项交互操作</p>
+<p>授权模块：</p>
+<p><img alt="" src="http://ww2.sinaimg.cn/mw690/baa3278fgw1f34fxmx1f4j20g70d70tb.jpg" /></p>
+<p>订单查询模块：</p>
+<p><img alt="" src="http://ww2.sinaimg.cn/mw690/baa3278fgw1f34g2gf0eqj208z09xgly.jpg" /></p>
+<p>其他模块:</p>
+<p><img alt="" src="http://ww3.sinaimg.cn/mw690/baa3278fgw1f34g5y99vsj20cg09zdga.jpg" /></p>
+<h3 id="35"><a name="user-content-35" href="#35" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.5 数据库设计</h3>
+<h3 id="351"><a name="user-content-351" href="#351" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.5.1 数据库设计的原则</h3>
+<p>一个确保数据库事务正确执行的四个基本要素是：</p>
+<ul>
+<li>原子性：基本表中的字段是不可再分解的。</li>
+<li>原始性：基本表中的记录是原始数据（基础数据）的记录。</li>
+<li>演绎性：由基本表与代码表中的数据，可以派生出所有的输出数据。</li>
+<li>稳定性：基本表的结构是相对稳定的，表中的记录是要长期保存的。</li>
+</ul>
+<p>为了建立冗余较小、结构合理的数据库，设计数据库时必须遵循一定的规则。在关系型数据库中这种规则就称为范式。范式是符合某一种设计要求的总结。要想设计一个结构合理的关系型数据库，必须满足一定的范式。在实际开发中最为常见的设计范式有三个：</p>
+<ul>
+<li>第一范式(确保每列保持原子性)</li>
+<li>第二范式(确保表中的每列都和主键相关)</li>
+<li>第三范式(确保每列都和主键列直接相关,而不是间接相关)</li>
+</ul>
+<p>我们还需要关联数据库，不然就去使用 no-sql 数据库了，关联的好处：</p>
+<ul>
+<li>整洁、简单，独立性强。从整个系统来看，虽然关联多出了不少表格，但是每张表都是独立的，很好的维护了整个系统的简洁性。</li>
+<li>将部分逻辑业务交给了DBA，在数据库接口层注重的是sql查询语句的编写，上层业务开发人员可以省下不少力气。</li>
+<li>由于关联的字段都是用主键进行查询的，减少了出错的可能性。再者，不关联的表的记录的更改可能会涉及到多张表格的同步问题，处理不好也容易出错。</li>
+<li>关联的表多用到sql语句来完成业务与逻辑，而不关联的表可能要上层程序本身负担一部分逻辑判断的任务，这样子混乱的逻辑与烦杂的判断，则需要多次封装继承。因此关联还是降低了程序员出错的可能性。</li>
+</ul>
+<h3 id="352"><a name="user-content-352" href="#352" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.5.2 数据字典</h3>
+<p>根据需求分析中功能的需求以及对总体的设计，同时对酒店信息管理系统处理过程的分析，另外包括对数据流图参考，本设计的数据字典有以下一些：</p>
+<p><img alt="" src="http://ww2.sinaimg.cn/mw690/baa3278fgw1f34gg7r0uqj20dj080glq.jpg" /></p>
+<h3 id="353-e-r"><a name="user-content-353-e-r" href="#353-e-r" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.5.3 系统 E-R 图</h3>
+<p><img alt="" src="http://ww1.sinaimg.cn/mw690/baa3278fgw1f34h1p0uh8j20ih0k2q4x.jpg" /></p>
+<h3 id="354"><a name="user-content-354" href="#354" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.5.4 数据表设计</h3>
+<p>根据上面的 e-r 图，设计如下一些数据库：</p>
+<p>用户表(users)的设计:</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th>是否为空</th>
+<th>键</th>
+<th>默认</th>
+<th>附加</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>int(10) unsigned</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>auto_increment</td>
+<td>主键</td>
+</tr>
+<tr>
+<td>name</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+<td>用户名</td>
+</tr>
+<tr>
+<td>email</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>UNI</td>
+<td>NULL</td>
+<td></td>
+<td>邮箱</td>
+</tr>
+<tr>
+<td>password</td>
+<td>varchar(60)</td>
+<td>NO</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+<td>密码</td>
+</tr>
+<tr>
+<td>is_admin</td>
+<td>tinyint(1)</td>
+<td>NO</td>
+<td></td>
+<td>0</td>
+<td></td>
+<td>是否为管理员</td>
+</tr>
+<tr>
+<td>remember_token</td>
+<td>varchar(100)</td>
+<td>YES</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+<td>记住密码令牌</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>timestamp</td>
+<td>YES</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+<td>创建时间</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>timestamp</td>
+<td>YES</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+<td>修改时间</td>
+</tr>
+</tbody>
+</table>
+<p>修改密码表(password_resets)设计：</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th>是否为空</th>
+<th>键</th>
+<th>默认</th>
+<th>附加</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>email</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td></td>
+<td>邮箱</td>
+</tr>
+<tr>
+<td>token</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td></td>
+<td>令牌</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>timestamp</td>
+<td>YES</td>
+<td></td>
+<td>NULL</td>
+<td>on update CURRENT_TIMESTAMP</td>
+<td>创建时间</td>
+</tr>
+</tbody>
+</table>
+<p>房间表(rooms)的设计：</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th>是否为空</th>
+<th>键</th>
+<th>默认</th>
+<th>附加</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>int(10) unsigned</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>auto_increment</td>
+<td>主键</td>
+</tr>
+<tr>
+<td>no</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>room_type_id</td>
+<td>int(10) unsigned</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>price</td>
+<td>int(11)</td>
+<td>NO</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>discount</td>
+<td>double(8,2)</td>
+<td>NO</td>
+<td></td>
+<td>10.00</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>image</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td></td>
+<td>img/rooms/default.png</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>timestamp</td>
+<td>YES</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+<td>创建时间</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>timestamp</td>
+<td>YES</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+<td>修改时间</td>
+</tr>
+</tbody>
+</table>
+<p>房间分类表(room_types)设计：</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th>是否为空</th>
+<th>键</th>
+<th>默认</th>
+<th>附加</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>int(10) unsigned</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>auto_increment</td>
+<td>主键</td>
+</tr>
+<tr>
+<td>name</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+<td>名称 ｜</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>timestamp</td>
+<td>YES</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+<td>创建时间</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>timestamp</td>
+<td>YES</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+<td>修改时间</td>
+</tr>
+</tbody>
+</table>
+<p>订单表(orders)设计：</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th>是否为空</th>
+<th>键</th>
+<th>默认</th>
+<th>附加</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>int(10) unsigned</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>auto_increment</td>
+<td>主键</td>
+</tr>
+<tr>
+<td>room_no</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td>MUL</td>
+<td>NULL</td>
+<td></td>
+<td>房间号</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>varchar(11)</td>
+<td>NO</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+<td>手机号</td>
+</tr>
+<tr>
+<td>idcard</td>
+<td>varchar(18)</td>
+<td>NO</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+<td>身份证号</td>
+</tr>
+<tr>
+<td>check_in_at</td>
+<td>timestamp</td>
+<td>NO</td>
+<td></td>
+<td>CURRENT_TIMESTAMP</td>
+<td>on update CURRENT_TIMESTAMP</td>
+<td>预约日期</td>
+</tr>
+<tr>
+<td>check_out_at</td>
+<td>timestamp</td>
+<td>NO</td>
+<td></td>
+<td>0000-00-00 00:00:00</td>
+<td></td>
+<td>退房日期</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>timestamp</td>
+<td>YES</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+<td>创建时间</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>timestamp</td>
+<td>YES</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+<td>修改时间</td>
+</tr>
+</tbody>
+</table>
+<p>系统设置表(settings)设计：</p>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>类型</th>
+<th>是否为空</th>
+<th>键</th>
+<th>默认</th>
+<th>附加</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>int(10) unsigned</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td>auto_increment</td>
+<td>主键</td>
+</tr>
+<tr>
+<td>company</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+<td>酒店名称</td>
+</tr>
+<tr>
+<td>welcome_title</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+<td>欢迎标题</td>
+</tr>
+<tr>
+<td>welcome_content</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+<td>欢迎描述</td>
+</tr>
+<tr>
+<td>service_title</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+<td>服务标题</td>
+</tr>
+<tr>
+<td>service_content</td>
+<td>varchar(255)</td>
+<td>NO</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+<td>服务描述</td>
+</tr>
+<tr>
+<td>weibo</td>
+<td>varchar(255)</td>
+<td>YES</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+<td>微博</td>
+</tr>
+<tr>
+<td>facebook</td>
+<td>varchar(255)</td>
+<td>YES</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+<td>facebook</td>
+</tr>
+<tr>
+<td>twitter</td>
+<td>varchar(255)</td>
+<td>YES</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+<td>twitter</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>timestamp</td>
+<td>YES</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+<td>创建时间</td>
+</tr>
+<tr>
+<td>updated_at</td>
+<td>timestamp</td>
+<td>YES</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+<td>修改时间</td>
+</tr>
+</tbody>
+</table>
+<h1 id="_4"><a name="user-content-_4" href="#_4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>四，系统的详细设计和实现</h1>
+<h3 id="41"><a name="user-content-41" href="#41" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4.1 处理过程设计</h3>
+<h3 id="411"><a name="user-content-411" href="#411" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4.1.1 处理流程图</h3>
+<p>用户登陆流程图：</p>
+<p><img alt="" src="http://ww2.sinaimg.cn/mw690/baa3278fgw1f2srh8ri14j207r0amjrh.jpg" /></p>
+<p>可以清楚的看到我们程序的整个流程，如果信息输入错误则无法登陆到后台对系统进行管理。</p>
+<p>房间查询流程图：</p>
+<p><img alt="" src="http://ww4.sinaimg.cn/mw690/baa3278fgw1f34hru344oj20540dmjrf.jpg" /></p>
+<p>在我们的酒店网站上直接输入你想要过滤的条件，点击按钮来进行搜索房间，可以选择价位区间，选择打折进行查询。</p>
+<p>当然，一个功能齐全的网站流程图是画不玩的，所以，这里挑选一个有代表性的难点输出，也就是房间预约流程图：</p>
+<p><img alt="" src="http://ww4.sinaimg.cn/mw690/baa3278fgw1f34hz3qngrj20cv0cmgm8.jpg" /></p>
+<p>这里也属于该系统的一个难点了，再后面的章节还会对其进行一些具体分析。</p>
+<h1 id="42"><a name="user-content-42" href="#42" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4.2　功能处理设计</h1>
+<ul>
+<li>
+<p>查看酒店全部人员（管理员和会员）</p>
+<ul>
+<li>用户名称： 查看酒店全部人员（管理员和会员）</li>
+<li>用例描述： 查看酒店全部人员（管理员和会员）</li>
+<li>角色: 管理员</li>
+<li>前置条件： 成功登陆</li>
+<li>后置条件： 无</li>
+<li>基本路径: 控制台，点击酒店全部人员（管理员和会员）</li>
+</ul>
+</li>
+<li>
+<p>删除酒店全部人员（管理员和会员）</p>
+<ul>
+<li>用户名称： 删除酒店全部人员（管理员和会员）</li>
+<li>用例描述： 删除酒店全部人员（管理员和会员）</li>
+<li>角色: 管理员</li>
+<li>前置条件： 成功登陆</li>
+<li>后置条件： 提示删除成功，刷新页面</li>
+<li>基本路径: 控制台，点击酒店全部人员（管理员和会员），点击删除按钮，弹出提示信息，点击确认</li>
+</ul>
+</li>
+<li>
+<p>查看酒店房间分类</p>
+<ul>
+<li>用户名称： 查看酒店房间分类</li>
+<li>用例描述： 查看酒店房间分类</li>
+<li>角色: 管理员</li>
+<li>前置条件： 成功登陆</li>
+<li>后置条件： 无</li>
+<li>基本路径: 控制台，点击酒店房间分类</li>
+</ul>
+</li>
+<li>
+<p>新增酒店房间分类</p>
+<ul>
+<li>用户名称： 新增酒店房间分类</li>
+<li>用例描述： 新增酒店房间分类</li>
+<li>角色: 管理员</li>
+<li>前置条件： 成功登陆</li>
+<li>后置条件： 提示增加成功，跳转显示所有分类</li>
+<li>基本路径: 控制台，点击酒店房间分类，点击增加按钮，填写正确信息，确认</li>
+</ul>
+</li>
+<li>
+<p>修改酒店房间分类</p>
+<ul>
+<li>用户名称： 修改酒店房间分类</li>
+<li>用例描述： 修改酒店房间分类</li>
+<li>角色: 管理员</li>
+<li>前置条件： 成功登陆</li>
+<li>后置条件： 提示修改成功，跳转显示所有分类</li>
+<li>基本路径: 控制台，点击酒店房间分类，点击修改，填写正确信息，确认</li>
+</ul>
+</li>
+<li>
+<p>删除酒店房间分类</p>
+<ul>
+<li>用户名称： 删除酒店房间分类</li>
+<li>用例描述： 删除酒店房间分类</li>
+<li>角色: 管理员</li>
+<li>前置条件： 成功登陆</li>
+<li>后置条件： 提示删除成功，刷新页面</li>
+<li>基本路径: 控制台，点击酒店房间分类，点击删除按钮，弹出提示信息，点击确认</li>
+</ul>
+</li>
+<li>
+<p>查看酒店房间</p>
+<ul>
+<li>用户名称： 查看酒店房间</li>
+<li>用例描述： 查看酒店房间</li>
+<li>角色: 管理员</li>
+<li>前置条件： 成功登陆</li>
+<li>后置条件： 无</li>
+<li>基本路径: 控制台，点击酒店房间</li>
+</ul>
+</li>
+<li>
+<p>新增酒店房间</p>
+<ul>
+<li>用户名称： 新增酒店房间</li>
+<li>用例描述： 新增酒店房间</li>
+<li>角色: 管理员</li>
+<li>前置条件： 成功登陆</li>
+<li>后置条件： 提示增加成功，跳转显示所有</li>
+<li>基本路径: 控制台，点击酒店房间，点击增加按钮，填写正确信息，确认</li>
+</ul>
+</li>
+<li>
+<p>修改酒店房间</p>
+<ul>
+<li>用户名称： 修改酒店房间</li>
+<li>用例描述： 修改酒店房间</li>
+<li>角色: 管理员</li>
+<li>前置条件： 成功登陆</li>
+<li>后置条件： 提示修改成功，跳转显示所有</li>
+<li>基本路径: 控制台，点击酒店房间，点击修改，填写正确信息，确认</li>
+</ul>
+</li>
+<li>
+<p>删除酒店房间</p>
+<ul>
+<li>用户名称： 删除酒店房间</li>
+<li>用例描述： 删除酒店房间</li>
+<li>角色: 管理员</li>
+<li>前置条件： 成功登陆</li>
+<li>后置条件： 提示删除成功，刷新页面</li>
+<li>基本路径: 控制台，点击酒店房间，点击删除按钮，弹出提示信息，点击确认</li>
+</ul>
+</li>
+<li>
+<p>查看酒店预约订单</p>
+<ul>
+<li>用户名称： 查看酒店预约订单</li>
+<li>用例描述： 查看酒店预约订单</li>
+<li>角色: 管理员</li>
+<li>前置条件： 成功登陆</li>
+<li>后置条件： 无</li>
+<li>基本路径: 控制台，点击酒店预约订单</li>
+</ul>
+</li>
+<li>
+<p>新增酒店预约订单</p>
+<ul>
+<li>用户名称： 新增酒店预约订单</li>
+<li>用例描述： 新增酒店预约订单</li>
+<li>角色: 管理员</li>
+<li>前置条件： 成功登陆</li>
+<li>后置条件： 提示增加成功，跳转显示所有</li>
+<li>基本路径: 控制台，点击酒店预约订单，点击增加按钮，填写正确信息，确认</li>
+</ul>
+</li>
+<li>
+<p>修改酒店预约订单</p>
+<ul>
+<li>用户名称： 修改酒店预约订单</li>
+<li>用例描述： 修改酒店预约订单</li>
+<li>角色: 管理员</li>
+<li>前置条件： 成功登陆</li>
+<li>后置条件： 提示修改成功，跳转显示所有</li>
+<li>基本路径: 控制台，点击酒店预约订单，点击修改，填写正确信息，确认</li>
+</ul>
+</li>
+<li>
+<p>删除酒店预约订单</p>
+<ul>
+<li>用户名称： 删除酒店预约订单</li>
+<li>用例描述： 删除酒店预约订单</li>
+<li>角色: 管理员</li>
+<li>前置条件： 成功登陆</li>
+<li>后置条件： 提示删除成功，刷新页面</li>
+<li>基本路径: 控制台，点击酒店预约订单，点击删除按钮，弹出提示信息，点击确认</li>
+</ul>
+</li>
+<li>
+<p>修改系统设置</p>
+<ul>
+<li>用户名称： 修改系统设置</li>
+<li>用例描述： 修改系统设置</li>
+<li>角色: 管理员</li>
+<li>前置条件： 成功登陆</li>
+<li>后置条件： 提示修改成功，刷新页面</li>
+<li>基本路径: 控制台，点击系统设置，然后输入信息，点击确认</li>
+</ul>
+</li>
+<li>
+<p>根据房间号查找流水</p>
+<ul>
+<li>用户名称： 根据房间号查找流水</li>
+<li>用例描述： 根据房间号查找流水</li>
+<li>角色: 管理员</li>
+<li>前置条件： 成功登陆</li>
+<li>后置条件： 无</li>
+<li>基本路径: 控制台，选择房间号，点击查找，显示初查找结果</li>
+</ul>
+</li>
+<li>
+<p>根据房间类型查找流水</p>
+<ul>
+<li>用户名称： 根据房间类型查找流水</li>
+<li>用例描述： 根据房间类型查找流水</li>
+<li>角色: 管理员</li>
+<li>前置条件： 成功登陆</li>
+<li>后置条件： 无</li>
+<li>基本路径: 控制台，选择房间类型，点击查找，显示初查找结果</li>
+</ul>
+</li>
+<li>
+<p>根据日期查找流水</p>
+<ul>
+<li>用户名称： 根据日期查找流水</li>
+<li>用例描述： 根据日期查找流水</li>
+<li>角色: 管理员</li>
+<li>前置条件： 成功登陆</li>
+<li>后置条件： 无</li>
+<li>基本路径: 控制台，选择日期，点击查找，显示初查找结果</li>
+</ul>
+</li>
+<li>
+<p>根据日期维度查找流水</p>
+<ul>
+<li>用户名称： 根据日期维度查找流水</li>
+<li>用例描述： 根据日期维度查找流水</li>
+<li>角色: 管理员</li>
+<li>前置条件： 成功登陆</li>
+<li>后置条件： 无</li>
+<li>基本路径: 控制台，填写日期维度，点击查找，显示初查找结果</li>
+</ul>
+</li>
+<li>
+<p>注册用户</p>
+<ul>
+<li>用户名称： 注册用户</li>
+<li>用例描述： 注册用户</li>
+<li>角色: 游客</li>
+<li>前置条件： 进入注册页面</li>
+<li>后置条件： 登陆到首页</li>
+<li>基本路径: 填写正确注册信息，点击注册</li>
+</ul>
+</li>
+<li>
+<p>用户登录</p>
+<ul>
+<li>用户名称： 用户登录</li>
+<li>用例描述： 用户登录</li>
+<li>角色: 游客</li>
+<li>前置条件： 进入登录页面</li>
+<li>后置条件： 登录到首页</li>
+<li>基本路径: 填写正确登录信息，点击登录</li>
+</ul>
+</li>
+<li>
+<p>用户登录</p>
+<ul>
+<li>用户名称： 用户退出登录</li>
+<li>用例描述： 用户退出登录</li>
+<li>角色: 游客</li>
+<li>前置条件： 登录中</li>
+<li>后置条件： 无</li>
+<li>基本路径: 点击右上角的退出按钮</li>
+</ul>
+</li>
+<li>
+<p>查看所有房间</p>
+<ul>
+<li>用户名称： 查看所有房间</li>
+<li>用例描述： 查看所有房间</li>
+<li>角色: 所有人</li>
+<li>前置条件： 进入网站</li>
+<li>后置条件： 无</li>
+<li>基本路径: 点击导航上的所有房间</li>
+</ul>
+</li>
+<li>
+<p>根据价格区间查找房间</p>
+<ul>
+<li>用户名称： 根据价格区间查找房间</li>
+<li>用例描述： 根据价格区间查找房间</li>
+<li>角色: 所有人</li>
+<li>前置条件： 进入网站</li>
+<li>后置条件： 无</li>
+<li>基本路径: 输入最低价，最高价，点击搜索按钮</li>
+</ul>
+</li>
+<li>
+<p>根据折扣查找房间</p>
+<ul>
+<li>用户名称： 根据折扣查找房间</li>
+<li>用例描述： 根据折扣查找房间</li>
+<li>角色: 所有人</li>
+<li>前置条件： 进入网站</li>
+<li>后置条件： 无</li>
+<li>基本路径: 输入折扣，点击搜索按钮</li>
+</ul>
+</li>
+</ul>
+<h3 id="43"><a name="user-content-43" href="#43" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4.3 界面设计</h3>
+<p>本系统全部都使用　Bootstrap　作为基础搭建。</p>
+<h3 id="431-bootstrap"><a name="user-content-431-bootstrap" href="#431-bootstrap" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4.3.1　Bootstrap　介绍</h3>
+<p>Bootstrap 的学习非常简单，并且它所提供的样式又非常精美。只要稍微简单的学习就可以制作出漂亮的页面。如今基于Bootstrap框架的免费HTML5网站已经开始成为行业趋势。研究人员已经证实，Bootstrap是引领设计和开发行业趋势效果最为显著的。这就是为什么，开发商使用基于Bootstrap的HTML5模板来创建他们的网站的重要原因。</p>
+<h3 id="432"><a name="user-content-432" href="#432" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4.3.2 界面截图预览</h3>
+<p>首先，这是酒店网站首页：</p>
+<p><img alt="" src="http://ww3.sinaimg.cn/mw690/baa3278fgw1f34iozw6vnj21190hswq9.jpg" /></p>
+<p>另外，网站的图片十滚动的，可以手动添加。</p>
+<p>这是房间搜索界面：</p>
+<p><img alt="" src="http://ww4.sinaimg.cn/mw690/baa3278fgw1f34ip0vb4hj211g0iewoe.jpg" /></p>
+<p>登录到后台之后，是这样的：</p>
+<p><img alt="" src="http://ww3.sinaimg.cn/mw690/baa3278fgw1f34ip1e1fkj211i0b0gm5.jpg" /></p>
+<p>这是系统设置的界面：</p>
+<p><img alt="" src="http://ww2.sinaimg.cn/mw690/baa3278fgw1f34ip10uppj210z0i0wft.jpg" /></p>
+<p>这是房间列表的界面：</p>
+<p><img alt="" src="http://ww3.sinaimg.cn/mw690/baa3278fgw1f34ip1roa7j210v0hxjtl.jpg" /></p>
+<h3 id="44"><a name="user-content-44" href="#44" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4.4　程序实现</h3>
+<p>本系统使用 laravel 作为框架，毫无夸张地说，代码量超级大，所以这边以　MVC 为基础去介绍一下系统的基本实现。</p>
+<p>首先，介绍下主要的目录结构，以便后面更深的去了解程序本身，不过，这也是简化之后的，实际上更加的复杂：</p>
+<pre><code class="plain">app/ - 主要核心业务代码
+    Events/ - 事件
+    Exceptions/ - 自定义异常的
+    Http/ - 核心　Http　请求响应
+        Controllers/ - 控制器
+        Middleware/ - 中间件
+        Requests/ - 请求数据处理
+        routes.php - 定义路由
+        validators.php - 自定义验证器
+    Models/ - 模型
+config/ - 配置文件
+database/ - 数据库文件
+resources/ - 资源文件
+    assets/ - css, js 预编译文件
+    lang/ - 多语言
+    views/ - 视图
+tests/ - 测试文件夹
+.env - 系统变量
+</code></pre>
+
+<p>这里面最好的地方就在 .env 文件，你可以将系统的设置或者一些隐私信息存储在里面，这样可以很快的修改，很方便的设计。</p>
+<p>我们先来对最重要的用户模型进行解释</p>
+<pre><code class="php">class User extends Authenticatable
+{
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name', 'email', 'password', 'is_admin'
+    ];
+
+    /**
+     * Format the output.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'is_admin' =&gt; 'bool'
+    ];
+
+    /**
+     * The attributes excluded from the model's JSON form.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
+}
+</code></pre>
+
+<p>这里可以看到，这里的 fillable 数组映射到数据库中对应的字段，当然，hidden　则是保护用户的隐藏信息。</p>
+<p>来看最关键的订单模型吧：</p>
+<pre><code class="php">class Order extends Model
+{
+    protected $fillable = [
+        'room_no',
+        'phone',
+        'idcard',
+        'check_in_at',
+        'check_out_at',
+    ];
+
+    protected $dates = ['check_in_at', 'check_out_at'];
+
+    protected $casts = [
+        'phone' =&gt; 'int'
+    ];
+
+    public function room()
+    {
+        return $this-&gt;belongsTo('App\Models\Room', 'room_no', 'no');
+    }
+
+    public static function getIncoming($orders = null)
+    {
+        $orders = $orders ?: self::with('room')-&gt;get();
+
+        return $orders-&gt;reduce(function($incoming, $order) {
+            return $incoming += $order-&gt;room-&gt;price * $order-&gt;getStayDays();
+        }, 0);
+    }
+
+    public function getStayDays()
+    {
+        return $this-&gt;check_in_at-&gt;diffInDays($this-&gt;check_out_at);
+    }
+}
+</code></pre>
+
+<p>首先，<code>room</code> 代表着每个订单属于一个房间，也就是一个一对一模型，那么我们就可以在当前的订单中去获取到房间的信息。接下来更为关键的是去统计我们的收入问题了，<code>getIncoming</code>　这个方法懂的人可以看明白，写的很好，使用 reduce 去计算我们的收入。</p>
+<h1 id="_5"><a name="user-content-_5" href="#_5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>五，系统测试</h1>
+<h3 id="51"><a name="user-content-51" href="#51" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5.1　系统测试的必要性</h3>
+<p>软件从需求分析开始，就会引入错误。而且越是前期的错误，造成的损失就越大。需求分析，就是将用户的需求转化成产品的需求。这是系统架构师需要做的事情。系统架构师需要明确这个产品该如何来满足用户的需求，有哪些use case，这些use case直接关系到V-mode中对应着的系统测试的test case。系统架构师需要来自系统测试人员的反馈，来判断这个case的可测性和可用性。用户是否真的需要这些case，系统测试人员往往会给出他们的意见。Use case的偏差，直接会导致用户的不满，而且有可能导致整个feature的失败。我们有过不少这样的经历，就是系统架构师在需求阶段容易求大求全，在系统的复杂性和新功能对系统的影响上，在客户如何使用新feature上没有经验，在开发和测试阶段，麻烦不断，导致整个feature无法按期完成，最后不了了之，所有的努力都付之东流。系统测试人员在需求阶段加入，可以从用户的角度给架构师以反馈，告诉他什么功能是用户最需要的，什么功能是可有可无的，用户最关注的点在哪里。这样，架构师就可以有所取舍，将最能满足用户，且易实现和测试的部分规划出来，进行优化，舍弃那些对用户来说可有可无，却占到大量开发和测试时间的部分。一个公司的架构师往往是从软件开发人员培养而来，他们过多地重视开发成本，而忽视测试成本，也忽视用户的使用感受。记得有一个产品经理曾经告诉我，他们很难获得用户的真实感受，因为和用户开会的时间非常有限，一两个小时的会议，要讨论几十个新feature，每个feature只能占用5分钟，很难在这5分钟里问清所有的问题，只能靠猜。其实，比猜更有效的方法，是培养优秀的系统测试人员。他们不但熟悉测试，也能通过验证用户报的bug了解用户对feature的使用，也能够体会用户的感受。让系统测试人员参与需求分析过程，避免系统架构师出现大的偏差，帮助系统架构师预测用户对新feature的使用方式，是对产品质量提升的一个很重要的手段。</p>
+<h1 id="52"><a name="user-content-52" href="#52" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5.2 测试数据</h1>
+<table>
+<thead>
+<tr>
+<th>测试编号</th>
+<th>测试输入</th>
+<th>期待输出</th>
+<th>实际输出</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>首页测试</td>
+<td>显示首页画面</td>
+<td>显示首页画面</td>
+<td>测试的第一步，确保可以访问，服务器正常</td>
+</tr>
+<tr>
+<td>2</td>
+<td>增加酒店房间分类测试</td>
+<td>提示增加成功</td>
+<td>提示增加成功</td>
+<td>测试能添加酒店房间分类</td>
+</tr>
+<tr>
+<td>3</td>
+<td>修改酒店房间分类测试</td>
+<td>提示修改成功</td>
+<td>提示修改成功</td>
+<td>测试能添加酒店房间分类</td>
+</tr>
+<tr>
+<td>4</td>
+<td>删除酒店房间分类测试</td>
+<td>提示删除成功</td>
+<td>提示删除成功</td>
+<td>测试能添加酒店房间分类</td>
+</tr>
+<tr>
+<td>5</td>
+<td>增加酒店房间测试</td>
+<td>提示增加成功</td>
+<td>提示增加成功</td>
+<td>测试能添加酒店房间</td>
+</tr>
+<tr>
+<td>6</td>
+<td>修改酒店房间测试</td>
+<td>提示修改成功</td>
+<td>提示修改成功</td>
+<td>测试能添加酒店房间</td>
+</tr>
+<tr>
+<td>7</td>
+<td>删除酒店房间测试</td>
+<td>提示删除成功</td>
+<td>提示删除成功</td>
+<td>测试能添加酒店房间</td>
+</tr>
+<tr>
+<td>8</td>
+<td>增加酒店订单测试</td>
+<td>提示增加成功</td>
+<td>提示增加成功</td>
+<td>测试能添加酒店订单</td>
+</tr>
+<tr>
+<td>9</td>
+<td>修改酒店订单测试</td>
+<td>提示修改成功</td>
+<td>提示修改成功</td>
+<td>测试能添加酒店订单</td>
+</tr>
+<tr>
+<td>10</td>
+<td>删除酒店订单测试</td>
+<td>提示删除成功</td>
+<td>提示删除成功</td>
+<td>测试能添加酒店订单</td>
+</tr>
+<tr>
+<td>11</td>
+<td>修改系统设置</td>
+<td>提示修改成功，网站成功显示</td>
+<td>提示修改成功，网站成功显示</td>
+<td>测试能正常修改系统设置</td>
+</tr>
+<tr>
+<td>12</td>
+<td>登录测试</td>
+<td>登陆到后台管理界面</td>
+<td>登陆到后台管理界面</td>
+<td>测试能登录成功</td>
+</tr>
+<tr>
+<td>13</td>
+<td>注册测试</td>
+<td>登陆到后台管理界面</td>
+<td>登陆到后台管理界面</td>
+<td>测试能注册成功</td>
+</tr>
+<tr>
+<td>14</td>
+<td>退出登录测试</td>
+<td>退出到首页</td>
+<td>退出到首页</td>
+<td>测试能退出登录成功</td>
+</tr>
+<tr>
+<td>15</td>
+<td>修改资料测试</td>
+<td>提示修改成功</td>
+<td>提示修改成功</td>
+<td>测试能修改资料</td>
+</tr>
+<tr>
+<td>16</td>
+<td>找回密码测试</td>
+<td>提示修改成功，跳转到登录页面</td>
+<td>提示修改成功，跳转到登录页面</td>
+<td>测试能退找回密码</td>
+</tr>
+<tr>
+<td>17</td>
+<td>测试按最低价查找房间</td>
+<td>显示结果</td>
+<td>显示结果</td>
+<td>测试能按最低价查找房间</td>
+</tr>
+<tr>
+<td>18</td>
+<td>测试按最高价查找房间</td>
+<td>显示结果</td>
+<td>显示结果</td>
+<td>测试能按最高价查找房间</td>
+</tr>
+<tr>
+<td>19</td>
+<td>测试按折扣查找房间</td>
+<td>显示结果</td>
+<td>显示结果</td>
+<td>测试能按折扣查找房间</td>
+</tr>
+<tr>
+<td>20</td>
+<td>测试按房间类型查找流水</td>
+<td>显示结果</td>
+<td>显示结果</td>
+<td>测试能按房间类型查找流水</td>
+</tr>
+<tr>
+<td>21</td>
+<td>测试按房间号查找流水</td>
+<td>显示结果</td>
+<td>显示结果</td>
+<td>测试能按房间号查找流水</td>
+</tr>
+<tr>
+<td>22</td>
+<td>测试按时间日期查找流水</td>
+<td>显示结果</td>
+<td>显示结果</td>
+<td>测试能时间日期型查找流水</td>
+</tr>
+<tr>
+<td>23</td>
+<td>测试按时间日期查找流水</td>
+<td>显示结果</td>
+<td>显示结果</td>
+<td>测试能时间日期型查找流水</td>
+</tr>
+<tr>
+<td>24</td>
+<td>测试按时间日期范围查找流水</td>
+<td>显示结果</td>
+<td>显示结果</td>
+<td>测试能时间日期范围型查找流水</td>
+</tr>
+</tbody>
+</table>
+<h3 id="53"><a name="user-content-53" href="#53" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5.3 测试结果分析</h3>
+<p>根据系统的需求，然后结合该测试，可以确保系统能够正常运行，所以，该系统可以提交，能够满足毕设的要求。</p></article></body></html>
